@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #29131325);
+  transition: all linear 1s;
+  -webkit-transition: all linear 1s;
+  -moz-transition: all linear 1s;
+  -ms-transition: all linear 1s;
+  -o-transition: all linear 1s;
+}
+
+.container .box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container:hover > :not(:hover) {
+  margin: 0 -20px;
+  filter: drop-shadow(0 0 25 #0000) drop-shadow(0 0 45px #000);
+  -webkit-filter: drop-shadow(0 0 25 #0000) drop-shadow(0 0 45px #000);
+  transform: perspective(500px);
+  -webkit-transform: perspective(200px) rotateY(180deg) scale(0.8);
+  -moz-transform: perspective(500px);
+  -ms-transform: perspective(500px);
+  -o-transform: perspective(500px);
+}
+
+.container .box:hover {
+  transform: perspective(500px);
+  -webkit-transform: perspective(200px) rotateY(0deg) scale(1.8);
+  -moz-transform: perspective(500px);
+  -ms-transform: perspective(500px);
+  -o-transform: perspective(500px);
+}
